@@ -1,0 +1,8 @@
+menu:
+  models:
+    name: Контент // 0 // Модели телефонов
+    link: moduleDefault:list/module=models
+  #users:
+  #  icon: user
+  #  name: Администрирование // 0 // Пользователи
+  #  link: moduleDefault:list/module=users

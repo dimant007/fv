@@ -1,0 +1,20 @@
+entities:
+  Model:
+    constraints:
+      types: {entity: Type}
+      colors: {entity: Color}
+    fields:
+      name: {type: string}
+      image: {type: string_image}
+
+  Type:
+    foreigns:
+      model: {entity: Model}
+    fields:
+      name: {type: string}
+
+  Color:
+    foreigns:
+      model: {entity: Model}
+    fields:
+      name: {type: string}

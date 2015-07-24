@@ -1,0 +1,41 @@
+{% for model in models %}
+    <div class="col-md-6 choice-block">
+        <figure>
+            <img src="{{ model.image }}">
+        </figure>
+        <div class="model-title">
+            {{ model.name }}
+        </div>
+        <div class="choice-model-info">
+            <form class="choice-form" method="POST">
+                <div class="choice-model-color">
+                    <p class="row-label">Цвет корпуса:</p>
+                    <div class="choice-model-color-block">
+                        {% for color in model.colors.get() %}
+                            <div class="choice-color-button">
+                                <input value="{{ color.id }}" type="radio" name="color"  id="item-{{ model.id }}-{{ color.id }}" checked="checked">
+                                <label style=" background-color: {{ color.name }} " class="checkbox" for="item-{{ model.id }}-{{ color.id }}"></label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="choice-model-memory">
+                    <p class="row-label">Объём памяти:</p>
+                    <div class="choice-model-memory-size">
+                        {% for type in model.types.get() %}
+                            <div class="choice-model-memory-block">
+                                <input class="size" value="{{ type.id }}" type="radio" name="type"  id="type-{{ model.id }}-{{ type.id }}" checked="checked">
+                                <label class="checkbox type-label" for="type-{{ model.id }}-{{ type.id }}">{{ type.name }}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="choice-model-surcharge">
+                    <p class="row-label">Сумма доплаты:</p>
+                    <span class="new-sum">1100</span>
+                </div>
+                <div class="choice-model-button"><button>обменять</button></div>
+            </form>
+        </div>
+    </div>
+{% endfor %}
