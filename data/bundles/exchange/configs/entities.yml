@@ -18,3 +18,11 @@ entities:
       model: {entity: Model}
     fields:
       name: {type: string}
+
+  Price:
+    foreigns:
+      model: {entity: Model}
+      type: {entity: Type}
+      color: {entity: Color}
+    fields:
+      name: {type: string}

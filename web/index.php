@@ -5,7 +5,7 @@ header('P3P: CP="NOI ADM DEV COM NAV OUR STP"');
 
 define( "FV_PROFILE", isset( $_GET['profiler'] ) );
 define( "FV_PRODUCTION", FALSE );
-define( "FV_DEBUG_MODE", TRUE);
+define( "FV_DEBUG_MODE", TRUE );
 
 if( FV_PROFILE ){
     $startTime = microtime(true);

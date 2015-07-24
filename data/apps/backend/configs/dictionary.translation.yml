@@ -32,6 +32,7 @@ dictionary:
       validators: 
         required: Это поле нужно заполнить 
         uniq: Это поле должно быть уникально 
+        adminBundle\Form\FieldValidator\AdminPasswordCheck: ~ 
 
     Admin_Form: 
       fields: 
@@ -54,7 +55,14 @@ dictionary:
         name: ~ 
         modelId: ~ 
 
-    Color_Form: 
-      fields: 
+    AdminBundle\Form\Auth\SignIn: 
+      labels: 
         name: ~ 
-        modelId: ~ 
+        submit: ~ 
+
+      fields: 
+        login: ~ 
+        password: ~ 
+
+      validators: 
+        adminBundle\Form\FieldValidator\AdminPasswordCheck: ~ 

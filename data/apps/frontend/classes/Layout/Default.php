@@ -16,7 +16,6 @@ class Layout_Default extends fvLayout
 
         $this->addJS([
             "/theme/scripts/jquery-2.1.4.js",
-            "/theme/scripts/index.js",
             "/theme/scripts/index2.js",
             "/theme/scripts/scrolltop.js"
         ]);
