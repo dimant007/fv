@@ -13,10 +13,6 @@ modules:
   colors:
     name: Цвета телефонов
     entity: Color
-
-  prices:
-    name: Цена данной модели
-    entity: Price
   #pages:
   #  name: Страницы
   #  entity: StaticPage

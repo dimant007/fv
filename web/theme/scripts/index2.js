@@ -4,7 +4,7 @@
 
 jQuery(function($){
     $('.choice-form').on('click', '[type=radio]', function(){
-        $.post('pdo.php', $(this).parents('form').serialize(), function(response){
+        $.post('theme/pdo.php', $(this).parents('form').serialize(), function(response){
             $('.new-sum').html(response).show();
         });
     });
