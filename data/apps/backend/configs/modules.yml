@@ -9,10 +9,18 @@ modules:
   types:
     name: Комплектации
     entity: Type
+    submodules:
+      prices: type
 
   colors:
     name: Цвета телефонов
     entity: Color
+    submodules:
+      prices: color
+
+  prices:
+    name: Цена модельного ряда
+    entity: Price
   #pages:
   #  name: Страницы
   #  entity: StaticPage

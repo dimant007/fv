@@ -13,4 +13,17 @@ class Controller_Home extends fvController
         $this->view()->colors = Color::findAll();
     }
 
+    /**
+     * @route /price
+     */
+    function priceAction()
+    {
+        $color = $this->getRequest()->getRequestParameter('color');
+        $type = $this->getRequest()->getRequestParameter('type');
+
+        $price = Price::find(['typeId' => $type, 'colorId' => $color]);
+
+        return $price->price->get();
+    }
+
 }

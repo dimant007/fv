@@ -8,13 +8,25 @@ entities:
       image: {type: string_image}
 
   Type:
+    constraints:
+      prices: {entity: Price}
     foreigns:
       model: {entity: Model}
     fields:
       name: {type: string}
 
   Color:
+    constraints:
+      prices: {entity: Price}
     foreigns:
       model: {entity: Model}
     fields:
       name: {type: string}
+
+  Price:
+    foreigns:
+      type: {entity: Type}
+      color: {entity: Color}
+    fields:
+      price: {type: string}
+

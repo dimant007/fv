@@ -28,6 +28,8 @@ dictionary:
         techUrl: ~ 
         role: ~ 
         modelId: ~ 
+        price: ~ 
+        colorId: ~ 
 
       validators: 
         required: Это поле нужно заполнить 
@@ -71,4 +73,12 @@ dictionary:
     Color_Form: 
       fields: 
         name: ~ 
-        modelId: ~ 
+
+    Dictionary_Form: 
+      fields: 
+        translation: ~ 
+
+    Price_Form: 
+      fields: 
+        price: ~ 
+        colorId: ~ 
